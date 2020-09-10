@@ -1,0 +1,58 @@
+### create product
+POST http://localhost:3000/products
+content-type: application/json
+
+{
+    "name":"One Plus - Nord"
+}
+
+### get all products
+GET http://localhost:3000/products
+
+### get product by id
+GET http://localhost:3000/products/5f5a79f01c51c00c84c4588
+
+### delete product by id
+DELETE http://localhost:3000/products/5f5a6d0164ac670b3c7b8be8
+
+### update product by id
+PATCH http://localhost:3000/products/5f5a6dbb64ac670b3c7b8ba
+content-type: application/json
+
+{
+    "price" : 50000
+}
+
+### 
+GET http://localhost:3000/xyc
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### not defined path
+POST http://localhost:3000/test
+content-type: application/json
+
+{
+    "name":"Aswath",
+    "age":25
+}
+
+### test with urlformencode
+POST http://localhost:3000/test
+content-type: application/x-www-form-urlencoded
+
+name=aswath&age=5
