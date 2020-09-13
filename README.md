@@ -1,6 +1,6 @@
 # node-mongo-rest-api
 
-production ready server code
+A node rest api server build with `polka, mongodb`
 
 ### Initial setup
 
@@ -22,6 +22,26 @@ production ready server code
     SALT=
 ```
 
-### courtesy
+### Notes
 
-https://www.youtube.com/playlist?list=PLdHg5T0SNpN3EoN3PEyCmPR42Ok_44OFT
+by default `g-zip compression` is enabled, to disable compression do following on each request
+
+```header
+header["x-no-compression"] = true
+```
+
+### Docs
+
+- [polka](https://github.com/lukeed/polka)
+- [polka-send-type](https://www.npmjs.com/package/@polka/send-type)
+- [cors-origin](https://github.com/expressjs/cors#readme)
+- [mongoose](https://mongoosejs.com/docs/)
+- [jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken)
+- [pino-logger](https://github.com/pinojs/pino)
+- [http-errors](https://github.com/jshttp/http-errors)
+- [donenv](https://github.com/motdotla/dotenv)
+- [compression](https://github.com/expressjs/compression)
+
+### Courtesy
+
+- [video](https://www.youtube.com/playlist?list=PLdHg5T0SNpN3EoN3PEyCmPR42Ok_44OFT)

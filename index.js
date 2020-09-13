@@ -3,12 +3,14 @@ const cors = require("cors");
 const cluster = require("@polka/cluster");
 const bodyParser = require("body-parser");
 const dotenv = require("dotenv");
+const compression = require("compression");
 //import environment variables
 dotenv.config();
 //import helpers
 const send = require("./helper/response");
 const log = require("./helper/logger");
 const authenticateToken = require("./helper/autheticate");
+const shouldCompress = require("./helper/compression");
 //import models
 const products = require("./controller/products");
 const users = require("./controller/users");
@@ -23,9 +25,9 @@ const app = polka({
 require("./initDb")();
 //initialize midlewares
 app.use(cors());
-app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(compression({ filter: shouldCompress, threshold: 102400 }));
 //initialize routes
 app.all("/test", (req, res) => {
   send.json(res, req.body);
