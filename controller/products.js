@@ -2,6 +2,7 @@ const send = require("../helper/response.js");
 const createError = require("http-errors");
 const mongoose = require("mongoose");
 const Product = require("../model/products");
+const { logger } = require("../helper/logger.js");
 
 exports.getAll = async (req, res, next) => {
   try {
@@ -11,7 +12,7 @@ exports.getAll = async (req, res, next) => {
     }
     send.json(res, result);
   } catch (err) {
-    console.log(err);
+    logger.info(err);
   }
 };
 
@@ -41,7 +42,7 @@ exports.deleteById = async (req, res, next) => {
     }
     send.json(res, result);
   } catch (err) {
-    console.log(err);
+    logger.error(err);
     if (err instanceof mongoose.CastError) {
       next(createError(400, "Invalid product id"));
       return;
@@ -78,17 +79,17 @@ exports.create = async (req, res, next) => {
   product
     .save()
     .then(() => {
-      console.log("created succesfully");
+      req.logger.info("created succesfully");
       send.json(res, product);
     })
-    .catch((err) => console.log(err));
+    .catch((err) => req.logger.info(err));
     */
   try {
     const product = new Product(req.body);
     const result = await product.save();
     send.json(res, result);
   } catch (err) {
-    console.log(err.message);
+    logger.info(err.message);
     if (err.name === "ValidationError") {
       next(createError(422, err.message));
       return;

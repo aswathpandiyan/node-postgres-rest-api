@@ -3,7 +3,8 @@ POST http://localhost:3000/products
 content-type: application/json
 
 {
-    "name":"One Plus - Nord"
+    "name":"Moto e4 plus",
+    "price":1400
 }
 
 ### get all products
@@ -27,10 +28,28 @@ content-type: application/json
 GET http://localhost:3000/xyc
 
 
+### Authenticate each url
+GET http://localhost:3000/products
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjVjOThkMTNhYjMzYzBjOGQyY2Y1YTQiLCJ1c2VybmFtZSI6ImFzd2F0aCIsImlhdCI6MTU5OTkwNDQ3OCwiZXhwIjoxNTk5OTA0NTk4fQ.s4MLEfgAxiXaFO43WvFnEoIx6-WCoBTeFcDTgZywajc
 
 
+### Creat user
+POST http://localhost:3000/users
+content-type: application/json
 
+{
+    "username" : "aswath",
+    "password" : "password"
+}
 
+### Login user
+POST http://localhost:3000/login
+content-type: application/json
+
+{
+    "username" : "aswath",
+    "password" : "password"
+}
 
 
 
