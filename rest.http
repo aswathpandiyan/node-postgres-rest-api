@@ -38,7 +38,7 @@ POST http://localhost:3000/users
 content-type: application/json
 
 {
-    "username" : "aswath",
+    "username" : "aswathpandiyan3",
     "password" : "password"
 }
 
@@ -51,7 +51,14 @@ content-type: application/json
     "password" : "password"
 }
 
+### refresh token
+POST http://localhost:3000/refresh-token
+content-type: application/json
 
+{
+    
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1OTk5OTA1MzAsImV4cCI6MTYzMTU0ODEzMCwiYXVkIjoiNWY1Y2E2MjVhMzgxMmIwZWY2ZjU2ZjJlIiwiaXNzIjoiY2xhbml6b24uY29tIn0.esBDYaxJHOaGOpHn0otx1psk-vxEpUEZjOAghc_fS3A"
+}
 
 
 

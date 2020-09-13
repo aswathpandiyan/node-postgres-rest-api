@@ -20,8 +20,6 @@ module.exports = () => {
   });
   process.on("SIGINT", () => {
     mongoose.connection.close(() => {
-      log.error("MongoDB Disconnected due to app termination");
-      //console.log("MongoDB Disconnected due to app termination");
       process.exit(0);
     });
   });
