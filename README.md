@@ -41,6 +41,7 @@ header["x-no-compression"] = true
 - [http-errors](https://github.com/jshttp/http-errors)
 - [donenv](https://github.com/motdotla/dotenv)
 - [compression](https://github.com/expressjs/compression)
+- [file-upload](https://nodejspedia.com/en/tutorial/4080/file-upload)
 
 ### Courtesy
 

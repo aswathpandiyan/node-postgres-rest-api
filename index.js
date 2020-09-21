@@ -11,9 +11,11 @@ const send = require("./helper/response");
 const log = require("./helper/logger");
 const authenticateToken = require("./helper/autheticate");
 const shouldCompress = require("./helper/compression");
+
 //import models
 const products = require("./controller/products");
 const users = require("./controller/users");
+const file = require("./controller/file");
 //initialize app
 const app = polka({
   onError: function (err, req, res, next) {
@@ -42,6 +44,8 @@ app.post("/register", users.create);
 app.post("/login", users.login);
 
 app.post("/refresh-token", users.refreshToken);
+
+app.post("/file-upload", file.uploadOne);
 
 const PORT = process.env.PORT || 3000;
 
