@@ -1,7 +1,7 @@
 {
-  "name": "node-mongo-rest-api",
+  "name": "node-postgres-rest-api",
   "version": "1.0.0",
-  "description": "A production ready rest api with mongodb",
+  "description": "A production ready rest api with postgres",
   "main": "index.js",
   "scripts": {
     "start": "nodemon index.js",
@@ -9,21 +9,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aswathpandiyan/node-mongo-rest-api.git"
+    "url": "git+https://github.com/aswathpandiyan/node-postgres-rest-api.git"
   },
   "keywords": [
     "server",
     "api",
     "node",
     "rest",
-    "mongo"
+    "postgres"
   ],
   "author": "aswath",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/aswathpandiyan/node-mongo-rest-api/issues"
+    "url": "https://github.com/aswathpandiyan/node-postgres-rest-api/issues"
   },
-  "homepage": "https://github.com/aswathpandiyan/node-mongo-rest-api#readme",
+  "homepage": "https://github.com/aswathpandiyan/node-postgres-rest-api#readme",
   "dependencies": {
     "@polka/cluster": "^1.0.0-next.0",
     "@polka/send-type": "^0.5.2",
