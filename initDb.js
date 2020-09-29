@@ -1,5 +1,5 @@
-const mongoose = require("mongoose");
-const db = require("./config/mongodb.js");
+const Pool = require("pg");
+const db = require("./config/postgres.js");
 const log = require("./helper/logger");
 
 module.exports = () => {

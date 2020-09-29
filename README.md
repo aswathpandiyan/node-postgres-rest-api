@@ -11,7 +11,7 @@ A node rest api server build with `polka, mongodb`
     CLUSTER_MODE= bool
     TZ=UTC or any timezone
 
-    MONGODB_URL=
+    POSTGRES_URL=
     DB_NAME=
     DB_USER=
     DB_PASS=
@@ -35,7 +35,7 @@ header["x-no-compression"] = true
 - [polka](https://github.com/lukeed/polka)
 - [polka-send-type](https://www.npmjs.com/package/@polka/send-type)
 - [cors-origin](https://github.com/expressjs/cors#readme)
-- [mongoose](https://mongoosejs.com/docs/)
+- [node-postgres](https://node-postgres.com/)
 - [jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken)
 - [pino-logger](https://github.com/pinojs/pino)
 - [http-errors](https://github.com/jshttp/http-errors)
@@ -45,4 +45,6 @@ header["x-no-compression"] = true
 
 ### Courtesy
 
-- [video](https://www.youtube.com/playlist?list=PLdHg5T0SNpN3EoN3PEyCmPR42Ok_44OFT)
+- [Source](https://blog.logrocket.com/setting-up-a-restful-api-with-node-js-and-postgresql-d96d6fc892d8/)
+
+- [article](https://www.taniarascia.com/node-express-postgresql-heroku/#production-tips)

@@ -1,27 +1,28 @@
-### create product
-POST http://localhost:3000/products
+### add book
+POST http://localhost:3000/books
 content-type: application/json
 
 {
-    "name":"Moto e4 plus",
-    "price":1400
+    "author":"manushyaputhiran",
+    "title":"Snegithiin Kathalan"
 }
 
-### get all products
-GET http://localhost:3000/products
+### get all books
+GET http://localhost:3000/books
 
 ### get product by id
-GET http://localhost:3000/products/5f5a79f01c51c00c84c4588
+GET http://localhost:3000/books/2
 
 ### delete product by id
-DELETE http://localhost:3000/products/5f5a6d0164ac670b3c7b8be8
+DELETE http://localhost:3000/books/5
 
 ### update product by id
-PATCH http://localhost:3000/products/5f5a6dbb64ac670b3c7b8ba
+PATCH http://localhost:3000/books/1
 content-type: application/json
 
 {
-    "price" : 50000
+    "author":"aswath",
+    "title":"booj"
 }
 
 ### 
